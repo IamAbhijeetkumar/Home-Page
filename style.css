@@ -1,0 +1,436 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: whitesmoke;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    transition: all .5s ease;
+    background-color: #042331;
+}
+
+.sidebar header {
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-bottom: 1px solid black;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition: .5s;
+}
+
+.sidebar ul a i {
+    margin-right: 16px;
+}
+
+.sidebar ul li:hover a {
+    padding-left: 55px;
+}
+
+#check {
+    display: none;
+}
+
+label #btn,
+label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 3px;
+}
+
+label #btn {
+    padding: 10px 10px;
+    margin: auto;
+    left: 35px;
+    top: 5px;
+    border: 1px solid black;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    transition: all .5s;
+}
+
+label #cancel {
+    z-index: 1111;
+    margin: auto;
+    left: -250px;
+    border: 1px solid black;
+    top: 5px;
+    font-size: 35px;
+    color: #ffffff;
+    padding: 10px 10px;
+    transition: all .5s ease-out;
+}
+
+#check:checked~.sidebar {
+    left: 0;
+}
+
+#check:checked~label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked~label #cancel {
+    left: 250px;
+}
+
+#check:checked~section {
+    margin-left: 250px;
+}
+
+section {
+    background: url() no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .5s;
+}
+
+section .container {
+    width: auto;
+    margin: auto;
+    padding: 0;
+    height: 28vh;
+    background-image: url('img/mountains.png');
+    background-position: center;
+    background-size: cover;
+
+}
+
+section .flex {
+    display: flex;
+    background: transparent;
+}
+
+.right .flex2 {
+    display: flex;
+    background: transparent;
+    justify-content: flex-end;
+}
+
+.flex .left {
+    width: 50vw;
+    height: 8vh;
+    background-color: transparent;
+}
+
+.flex .right {
+    width: 50vw;
+    height: 8vh;
+    background-color: transparent;
+}
+
+.right .design1 {
+    border-radius: 1vw;
+    border: 1px solid black;
+    margin: 15px 10px 15px 5px;
+    padding: 5px 10px;
+}
+
+.right .design2 {
+    border-radius: 1vw;
+    border: 1px solid black;
+    margin: 15px 10px 15px 5px;
+    padding: 5px 10px;
+}
+
+.right ul li a,
+i {
+    text-decoration: none;
+    color: rgb(255, 248, 248);
+}
+
+.flex .flex3 {
+    width: 100vw;
+    display: flex;
+    background: transparent;
+    /* justify-items: center; */
+}
+
+.flex ul {
+    justify-content: center;
+}
+
+.flex .design2 {
+    border-radius: 1vw;
+    /* background-color: white; */
+    border: 1px solid black;
+    margin: 15px 10px 15px 5px;
+    padding: 5px 10px;
+    align-items: center;
+}
+
+.flex ul li a,
+i {
+    text-decoration: none;
+    color: rgb(255, 248, 248);
+}
+
+.flex .flex4 {
+    margin: 0;
+    width: 100vw;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+
+.flex4 .searchbar {
+    align-items: center;
+    background-color: white;
+    padding: 0px 0px;
+    width: 42vw;
+    height: 6vh;
+    margin: 0px;
+    margin-left: 30vw;
+    border-radius: 5vw;
+    color: grey;
+    font-size: 30px;
+}
+
+.flex4 input {
+    text-align: start;
+    align-items: center;
+    border-radius: 5vw;
+    border-style: none;
+    width: 40vw;
+    height: 5.5vh;
+}
+
+.flex4 .searchbar i {
+    align-items: center;
+    font-size: 15px;
+    color: rgb(88, 124, 185);
+}
+
+.container .center {
+    display: grid;
+    margin: 15px 0px;
+    height: 10vh;
+    width: 100vw;
+    place-items: center;
+}
+
+.wrapper .button {
+    display: inline-block;
+    place-items: center;
+    height: 60px;
+    color: black;
+    width: 60px;
+    overflow: hidden;
+    margin: 20px 5px 20px 5px;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover {
+    width: 200px;
+    
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    color: black;
+    border-radius: 50px;
+    line-height: 60px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover .icon {
+    background: #4267b2;
+}
+
+.wrapper .button:nth-child(2):hover .icon {
+    background: #1DA1F2;
+}
+
+.wrapper .button:nth-child(3):hover .icon {
+    background: #E1306c;
+}
+
+.wrapper .button:nth-child(4):hover .icon {
+    background: black;
+}
+
+.wrapper .button:nth-child(5):hover .icon {
+    background: #ff0000;
+}
+
+.wrapper .button:nth-child(6):hover .icon {
+    background: #1DA1F2;
+}
+.wrapper .button:nth-child(7):hover .icon {
+    background: green;
+}
+
+.wrapper .button .icon i {
+    padding-left: 18px;
+    font-size: 25px;
+    color: black;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon i {
+    color: #fff;
+}
+
+.wrapper .button span {
+    font-size: 20px;
+    font-weight: 500;
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover span {
+    color: #4267b2;
+}
+
+.wrapper .button:nth-child(2):hover span {
+    color: #1DA1F2;
+}
+
+.wrapper .button:nth-child(3):hover span {
+    color: #E1306c;
+}
+
+.wrapper .button:nth-child(4):hover span {
+    color: black;
+}
+
+.wrapper .button:nth-child(5):hover span {
+    color: #ff0000;
+}
+
+.wrapper .button:nth-child(6):hover span {
+    color: #1DA1f2;
+}
+.wrapper .button:nth-child(7):hover span {
+    color:green;
+}
+
+.container1 {
+    display: flex;
+    width: 100w;
+    height: 4vh;
+    background-color: whitesmoke;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.30),0 11px 8px rgba(0, 0, 0, 0.22);
+}
+
+.container1 div {
+    width: 8vw;
+    height: 100;
+    background-color: whitesmoke;
+}
+
+.container1 ul {
+    /* margin:10px 0px; */
+    justify-content: space-between;
+    padding: px 0px;
+    width: 80vw;
+    background-color: whitesmoke;
+}
+
+ul li a {
+    justify-items: center;
+    margin: 5px 5px;
+    text-decoration: none;
+    padding: 10px 0px 0px 0px;
+    color: black;
+}
+
+ul li {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.container1 ul li a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: grey;
+    line-height: 10px;
+}
+
+.container ul .btn {
+    border-radius: 1vw;
+    padding: 0px 10px;
+
+}
+
+.container ul .btn i {
+    padding: 5px;
+    color: black;
+}
+.container2 {
+    margin-top: 10px;
+    float: center;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    background-color: whitesmoke;
+    display: flex;
+}
+.container2 .ing1 {
+    width: 80vw;
+    height: 50vh;
+    background-color: whitesmoke;
+    display: flex;
+}
+ .container2 .ing1 .card{
+    margin:20px 10px 20px 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.30),0 11px 8px rgba(0, 0, 0, 0.22);
+    width:25vw;
+    height:50vh;
+    box-sizing:border-box;
+    transition-duration: 5s;
+    float:center;
+    filter:blur(100%);
+}
+.card  img{
+    display: block;
+    width: 25vw;
+    height:30vh;
+    margin:0;
+
+}
+.card  span , p{
+    font-family: serif;
+    padding: 10px 10px 10px 10px;
+    text-align:left;
+}
